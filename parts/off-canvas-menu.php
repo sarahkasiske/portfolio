@@ -9,19 +9,22 @@
 
 ?>
 
-<nav class="tab-bar">
-  <section class="<?php echo apply_filters( 'filter_mobile_nav_position', 'mobile_nav_position' ); ?>-small">
-    <a class="<?php echo apply_filters( 'filter_mobile_nav_position', 'mobile_nav_position' ); ?>-off-canvas-toggle menu-icon" href="#"><span></span></a>
-  </section>
-  <section class="middle tab-bar-section">
+<div class="show-for-small-only" >
 
-    <h1 class="title">
-      <?php bloginfo( 'name' ); ?>
-    </h1>
+  <nav class="tab-bar">
+    <section class=" <?php echo apply_filters( 'filter_mobile_nav_position', 'mobile_nav_position' ); ?>-small">
+      <a class="<?php echo apply_filters( 'filter_mobile_nav_position', 'mobile_nav_position' ); ?>-off-canvas-toggle menu-icon" href="#"><span></span></a>
+    </section>
+    <section class="middle tab-bar-section">
 
-  </section>
-</nav>
+      <a href="<?php echo home_url(); ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/logo-mobile.png"  alt="<?php bloginfo( 'name' ); ?>" /></a></h1>
 
-<aside class="<?php echo apply_filters( 'filter_mobile_nav_position', 'mobile_nav_position' ); ?>-off-canvas-menu" aria-hidden="true">
-    <?php foundationpress_mobile_off_canvas( apply_filters('filter_mobile_nav_position', 'mobile_nav_position') ); ?>
-</aside>
+    </section>
+  </nav>
+
+
+  <aside class="<?php echo apply_filters( 'filter_mobile_nav_position', 'mobile_nav_position' ); ?>-off-canvas-menu" aria-hidden="true">
+      <?php foundationpress_mobile_off_canvas( apply_filters('filter_mobile_nav_position', 'mobile_nav_position') ); ?>
+  </aside>
+
+</div>
